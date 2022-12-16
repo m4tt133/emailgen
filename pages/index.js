@@ -34,13 +34,16 @@ export default function Home() {
       })
       .then(
         (pdfRes) =>
-          axios
-            .post(`${backendURL}/sendMail`, {
+          {
+            axios.post(`${backendURL}/sendMail`, {
               name,
               email,
               signDate,
               pdfRes,
             })
+
+            console.log(pdfRes)
+          }
       )
       .then(() => {
         canvasRef.current.clear();
