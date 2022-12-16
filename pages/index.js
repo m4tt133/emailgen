@@ -240,7 +240,7 @@ export default function Home() {
               }}
               ref={canvasRef}
             /> 
-          </div>
+          </div> 
           <button
             type="submit"
             className={`${
